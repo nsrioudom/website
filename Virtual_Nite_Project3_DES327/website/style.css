@@ -1,0 +1,303 @@
+
+
+/* Responive Navigation Start */
+
+main, body {
+     width: 100%;
+     margin: 0;
+     padding: 0;
+     overflow-x: hidden;
+}
+
+.mainNav {
+     overflow: hidden;
+     background-color: #231161;
+     position: fixed;
+     top: 0;
+     width: 100%;
+     z-index: 100;
+     transition: top 3s;
+     list-style: none;
+     text-align: center;
+}
+
+.mainNav a {
+     font-family: 'Montserrat', sans-serif;
+     color: #E9D597;
+     padding: 5px 20px;
+     text-decoration: none;
+     font-size: 18px;
+     display: inline-block;
+}
+
+.mainNav a:hover {
+     background-color: purple;
+}
+
+.mainNav .icon {
+     display: none;
+}
+
+.logo {
+     float: left;
+     width: 50px;
+     height: auto;
+     padding: 20px;
+}
+
+@media screen and (max-width: 750px) {
+     .mainNav a {
+          display: none;
+     }
+
+     .mainNav a.icon {
+          float: right;
+          display: block;
+          padding: 20px;
+     }
+
+     .logo {
+          display:none;
+     }
+}
+
+@media screen and (max-width: 750px) {
+     .mainNav.responsive {
+          position: relative;
+     }
+
+     .mainNav.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+     }
+
+     .mainNav.responsive a {
+          float: none;
+          display: block;
+          text-align: center;
+     }
+
+     .mainNav.responsive .logo {
+          float: none;
+     }
+}
+
+/* Navigation End */
+
+
+/* Parallax CSS Start */
+
+
+.parallax {
+     background-image: url("../imgs/img1.jpg");
+     min-height: 500px;
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+.content {
+     height: 1000px;
+     background-color: white;
+     /*font-size: 48px; */
+}
+
+.content h1 {
+     font-family: 'Montserrat', sans-serif;
+     line-height: 80px;
+}
+
+.content p {
+     /* font-size: 32px; */
+     font-family: 'Montserrat', sans-serif;
+     line-height: 50px;
+}
+
+body, html {
+     height: 100%;
+     margin: 0%;
+     font-size: 2vw;
+     font-family: "Montserrat", sans-serif;
+     font-weight: 300;
+     line-height: 1.8em;
+     color: #666
+}
+
+.pimg1, .pimg2, .pimg3, .pimg4, .pimg5, .pimg6 {
+     position: relative;
+     opacity: 0.70;
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     /* Note to self:
+  fixed = parallax
+  scroll = nromal
+  */
+     background-attachment: fixed;
+}
+
+.pimg1 {
+     background-image: url('../imgs/img1.jpg');
+     min-height: 100%;
+}
+
+.pimg2 {
+     background-image: url('../imgs/img2.jpg');
+     min-height: 500px;
+}
+
+.pimg3 {
+     background-image: url('../imgs/img3.jpg');
+     min-height: 300px;
+}
+
+.pimg4 {
+     background-image: url('../imgs/img5.jpg');
+     min-height: 300px;
+}
+
+.pimg5 {
+     background-image: url('../imgs/img6.jpg');
+     min-height: 500px;
+}
+
+.pimg6 {
+     background-image: url('../imgs/img7.jpg');
+     min-height: 500px;
+}
+
+.section {
+     text-align: center;
+     padding: 50px 80px;
+}
+
+.section-light {
+     background-color: #f4fffd;
+     color: #53565A;
+     text-align: center;
+     font-size: 1.125em;
+     line-height: normal;
+}
+
+.section-light h1 {
+     letter-spacing: 5px;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 800;
+}
+
+.section-light p {
+     letter-spacing: normal;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 300;
+}
+
+.section-dark {
+     background-color: #463077;
+     font-size: 1.125em;
+     color: #E9D597;
+     text-align: center;
+     line-height: normal;
+}
+
+.section-dark h1 {
+     letter-spacing: 5px;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 800;
+}
+
+.section-dark p {
+     letter-spacing: normal;
+     font-weight: 300;
+}
+
+.ptext {
+     position: absolute;
+     top: 50%;
+     width: 100%;
+     text-align: center;
+     color: #000;
+     line-height: normal;
+     /* font-size: 74px; */
+     font-size: 4em;
+     letter-spacing: 8px;
+     text-transform: uppercase;
+}
+
+.ptext, .border {
+     /*  background-color: #777; */
+     color: #fff;
+     padding: 20px;
+}
+
+.ptext,  .title {
+     color: #E9D597;
+}
+
+.ptext, .border.trans {
+     background-color: transparent;
+}
+
+ /* This will stop the parallax effect so the site works on mobile devices */
+@media (max-width: 568px) {
+     .pimg1, .pimg2, .pimg3, .pimg4, .pimg5, .pimg6 {
+          background-attachment: scroll;
+     }
+     .section-dark {
+          text-align: left;
+          font-size: 2.5em;
+     }
+     .section-light {
+          text-align: left;
+          font-size: 2.5em;
+     }
+}
+
+/* Parallax CSS end */
+
+
+/* Contact Form Start */
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+     width: 100%;
+     /* Full width */
+     padding: 12px;
+     /* Some padding */
+     border: 1px solid #ccc;
+     /* Gray border */
+     border-radius: 4px;
+     /* Rounded borders */
+     box-sizing: border-box;
+     /* Make sure that padding and width stays in place */
+     margin-top: 6px;
+     /* Add a top margin */
+     margin-bottom: 16px;
+     /* Bottom margin */
+     resize: vertical
+          /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+     background-color: #463077;
+     color: white;
+     padding: 12px 20px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+     background-color: #231161;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+     border-radius: 2px;
+     background-color: #fdfffc;
+     padding: 50px;
+}
+
+/* Contact Form End */
